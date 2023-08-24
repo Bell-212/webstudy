@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <style>
+    /* box 크기와 배경 이미지 크기를 동일하게 맞춤 */
+    .box1 {
+      box-sizing: border-box;
+      width: 192px;
+      height: 128px;
+
+      background-image: url(../../assets/images/animal10.jpg);
+      background-size: 192px 128px;
+
+      background: url(../../assets/images/animal10.jpg) center/192px 128px;  /* 단축속성 : 위치(position)/크기(size) */
+    }
+  </style>
+  <div class="box1"></div>
+
+  <hr>
+
+  <style>
+    .box2 {
+      box-sizing: border-box;
+      width: 500px;
+      height: 380px;
+      border: 1px solid gray;
+
+      background-image: url(../../assets/images/attach1.png);
+      background-repeat: no-repeat; /* 반복없음 */
+      background-size: auto;  /* 이미지 크기를 그대로 사용 */
+      background-position: center;  /* top/middle/bottom(세로 정렬), left/center/right(가로 정렬) */
+
+      background: url(../../assets/images/attach1.png) no-repeat right/auto;
+    }
+  </style>
+  <div class="box2"></div>
+
+  <hr>
+
+  <style>
+    /* box보다 큰 이미지 처리 */
+    .box3 {
+      box-sizing: border-box;
+      width: 300px;
+      height: 300px;
+      border: 1px solid gray;
+      background-image: url(../../assets/images/light2.png);
+      background-repeat: no-repeat;
+      background-size: contain; /* contain : 이미지를 늘리거나 자르지 않고 최대한 크게 조정해서 표현 */
+                                /* cover   : 너비/높이 중 작은 부분을 최대한 여백 없이 표시하고 box 밖으로 나간 부분은 자름 */
+      background-position: center;
+
+      background: url(../../assets/images/light2.png) no-repeat center/cover;
+    }
+  </style>
+  <div class="box3"></div>
+
+  <hr>
+
+  <style>
+    /* 이미지 일부만 표시하기 */
+    .box4 {
+      box-sizing: border-box;
+      width: 115px;
+      height: 115px;
+
+      background-image: url(../../assets/images/weather.png);
+      background-position: -145px 0; /* 가로 세로 순으로 이동, '-145px'은 배경이 '왼쪽'으로 145px 이동 */
+
+      background: url(../../assets/images/weather.png)  -145px 0/auto;
+
+    }
+    .box5 {
+      box-sizing: border-box;
+      width: 110px;
+      height: 220px;
+      background-image: url(../../assets/images/logo.png);
+      background-position: -1170px -175px; /* 배경이 왼쪽으로 1170px 이동, 위로 175px 이동 */
+      
+      background: url(../../assets/images/logo.png) -1170px -175px/auto;
+    }
+  </style>
+  <div class="box4"></div>
+  <div class="box5"></div>
+
+  <hr>
+
+  <style>
+    .box6 {
+      box-sizing: border-box;
+      width: 640px;
+      height: 480px;
+      background-image: url(../../assets/images/architecture1.jpg);
+      background-size: 640px 480px;   /* background-size: 100% */
+      background-color: gray;
+      
+      background: url(../../assets/images/architecture2.jpg) 640px 480px gray;
+      background-blend-mode: multiply;
+      
+      font-size: 80px;
+      font-weight: 900;
+      color: white;
+      text-align: center;   /* 가로 가운데 정렬 */
+      line-height: 480px;   /* box의 height와 line-height가 동일하면 세로 가운데 정렬 효과가 나타난다. (1줄만 가능) */
+    }
+  </style>
+  <div class="box6">우와</div>
+</body>
+</html>
