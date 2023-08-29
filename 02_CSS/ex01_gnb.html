@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <style>
+    /* CSS 초기화 */
+    /* 블록 요소 */
+    body,
+    div,
+    ul,
+    li {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    /* 인라인 요소 */
+    a {
+      color: black;
+      text-decoration: none;
+    }
+  </style>
+
+  <style>
+    /* gnb(global navigation bar) */
+    .wrap1 {
+      margin-top: 10px;
+    }
+
+    .wrap1>.gnb {
+      /* 각 항목 앞의 ● (marker) 없애기 */
+      list-style-type: none;
+
+      /* <li> 태그를 수평 배치하기 위해서 설정(부모 태그에 overflow: hidden; 추가) */
+      overflow: hidden;
+      border-top: 1px solid silver;
+      border-bottom: 1.5px solid darkgray;
+      padding-left: 300px;
+    }
+
+    .wrap1>.gnb>li {
+      /* <li> 태그를 수평 배치하기 위해서 설정(자식 태그에 float: left; 추가) */
+      float: left;
+      /* 각 메뉴의 너비 */
+      width: 80px;
+      /* 각 메뉴의 높이 */
+      height: 40px;
+    }
+
+    .wrap1>.gnb>li>a {
+      display: block;
+      /* 메뉴를 클릭할 수 있는 영역을 키우기 위해서 인라인 요소를 블록 요소로 변경 */
+      width: 100%;
+      /* 부모인 <li> 태그 기준 */
+      height: 100%;
+      text-align: center;
+      /* 가로 가운데 정렬 */
+      line-height: 40px;
+      /* line-height 값은 height 값과 같거나 비슷하게 설정해서 글자 세로 가운데 정렬 효과를 줌 */
+    }
+
+    .wrap1>.gnb>li>a:hover {
+      color: crimson;
+      /* 마우스를 가져다대면 글자 색이 변함 */
+    }
+  </style>
+
+  <div class="wrap1">
+    <ul class="gnb">
+      <li><a href="javascript:void(0)">메뉴 1</a></li>
+      <li><a href="javascript:void(0)">메뉴 2</a></li>
+      <li><a href="javascript:void(0)">메뉴 3</a></li>
+      <li><a href="javascript:void(0)">메뉴 4</a></li>
+      <li><a href="javascript:void(0)">메뉴 5</a></li>
+    </ul>
+  </div>
+
+  <hr>
+
+  <style>
+    .wrap2>.gnb {
+      list-style-type: none;
+      display: flex;
+      justify-content: center;  /* 각 항목(<li> 태그)을 flex-container(<ul> 태그)의 가로 가운데에 배치 */
+      border-top: 1px solid gray;
+      border-bottom: 1px solid gray;
+    }
+    .wrap2 > .gnb > li {
+      width: 80px;
+      height: 40px;
+    }
+    .wrap2 > .gnb > li > a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      line-height: 40px;
+    }
+    .wrap2 > .gnb > li > a:hover {
+      color: limegreen;
+      border-bottom: 2px solid limegreen;
+    }
+  </style>
+  <div class="wrap2">
+    <ul class="gnb">
+      <li><a href="javascript:void(0)">사전</a></li>
+      <li><a href="javascript:void(0)">뉴스</a></li>
+      <li><a href="javascript:void(0)">증권</a></li>
+      <li><a href="javascript:void(0)">부동산</a></li>
+      <li><a href="javascript:void(0)">지도</a></li>
+      <li><a href="javascript:void(0)">VIBE</a></li>
+      <li><a href="javascript:void(0)">도서</a></li>
+      <li><a href="javascript:void(0)">웹툰</a></li>
+    </ul>
+  </div>
+
+</body>
+
+</html>
