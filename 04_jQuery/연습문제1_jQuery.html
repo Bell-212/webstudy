@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="../../assets/js/lib/jquery-3.7.1.min.js"></script>
 </head>
 <body>
-
   <!-- 문제1. global navigation bar 만들기 -->
   <div id="box1"></div>
   <style>
@@ -42,7 +42,7 @@
       border-bottom: 5px solid blue;
     }
   </style>
-<script>
+  <script>
     /*
       문제1. 아래 태그를 만들어서 box1에 넣으시오.
       <ul class="gnb">
@@ -53,15 +53,24 @@
         <li><a href="#">Discover</a></li>
       </ul>
     */
+    // var menu = ['Models', 'Find & Buy', 'Electromobility', 'Services', 'Discover'];
+      
+    //   $.each(menu, function(i, elem){   
+      
+    // })
+    // 배열 생성 및 초기화
     var menu = ['Models', 'Find & Buy', 'Electromobility', 'Services', 'Discover'];
-    var box1 = document.getElementById('box1');
-    var str = '';
-    str += '<ul class="gnb">';
-    for(let i = 0; i < menu.length; i++){
-      str += '<li><a href="#">' + menu[i] + '</a></li>';
-    }
-    str += '</ul>'
-    box1.innerHTML = str;
+
+    // <ul class="gnb"> 태그를 jQuery 객체로 생성
+    var ul = $('<ul>').addClass('gnb');
+    
+    // 배열 순회하면서 <ul class="gnb"> 태그에 <li><a href="#"></a></li> 넣기
+    $.each(menu, function(i, elem){
+      ul.append($('<li>').append($('<a>').attr('href', '#').text(elem)));
+    })
+
+    // box1에 <ul class="gnb"> 태그 넣기
+    $('#box1').append(ul);
 
   </script>
 
@@ -259,6 +268,5 @@
     var images = ['animal1.jpg', 'animal2.jpg', 'animal3.jpg', 'animal4.jpg', 'animal5.jpg'];
     
   </script>
-
 </body>
 </html>
