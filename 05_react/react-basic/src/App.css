@@ -1,0 +1,17 @@
+.App {
+  text-align: center;
+}
+
+.header {
+  height: 50px;
+}
+.header a {
+  margin: 10px;
+}
+
+.footer {
+  height: 100px;
+  background-color: silver;
+  border-top: 1px solid gray;
+  padding-top: 42px;
+}
